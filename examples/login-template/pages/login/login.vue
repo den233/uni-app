@@ -110,14 +110,16 @@
                 const validUser = service.getUsers().some(function (user) {
                     return data.account === user.account && data.password === user.password;
                 });
-                if (validUser) {
-                    this.toMain(this.account);
-                } else {
-                    uni.showToast({
-                        icon: 'none',
-                        title: '用户账号或密码不正确',
-                    });
-                }
+				this.toMain(this.account);
+
+//                 if (validUser) {
+//                     this.toMain(this.account);
+//                 } else {
+//                     uni.showToast({
+//                         icon: 'none',
+//                         title: '用户账号或密码不正确',
+//                     });
+//                 }
             },
             oauth(value) {
                 uni.login({

@@ -4,6 +4,7 @@
             "path": "pages/tabBar/component/component",
             "style": {
                 "navigationBarTitleText": "组件",
+				"navigationBarBackgroundColor": "#0387FE",
                 "app-plus": {
                     "titleNView": {
                         "buttons": [{
