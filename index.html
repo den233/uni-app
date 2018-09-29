@@ -1,0 +1,791 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="sui-componentWrap">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+   
+  <link rel="stylesheet" href="http://www.longrich.com/travel/css/video-js.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+  <style>
+		 
+		.main{
+		   position: relative;
+		}
+	  .video-js{
+		  width:100%!important;
+	  }
+	  .modal-body{
+		  padding: 0;
+	  }
+		.tabs{
+			margin-top:10px;
+		}
+		.tabs .btn{
+			  padding: 5px 15px;
+				background:#43e1c5;
+				color: #fff;
+		}
+		.tabs .active{
+			  background: #cc761d;
+         color: #fff;
+		}
+		.tabs a{
+			color: #fff;
+		}
+		.tabs .active a{
+			color: #fff;
+
+		}
+		.tab-pane{
+			display:none;
+		}
+		
+			.tab-pane.active{
+				display:block
+		}
+		.icons img{
+			
+		}
+		.wenzi{
+			padding: 10px;
+		}
+		.icons{position: absolute;}
+		#c1{top: 23.3%;right: 9.5%;}
+		#c2{top: 29%;left: 6%;}
+		#c3{top: 33.4%;left: 6%;}
+		#c4{top: 39.5%;right: 5%;}
+		#c5{top: 48%;right: 20px;}
+		#c6{top: 55%;left: 6%;}
+		#c7{top: 65%;right: 1.5%;}
+		#c8{top: 69%;right:9%;}
+		#c9{top: 76%;left: 3.5%;}
+		#c10{top: 83%;right: 12.5%;}
+		#c11{top: 87%;right: 7.5%;}
+		#c1 img{
+			width:40px;
+		}
+		#c2 img{
+			width:40px;
+		}
+		#c3 img{
+			width:40px;
+		}
+		#c4 img{
+			width:40px;
+		}
+		#c5 img{
+			width:60px;
+		}
+		#c6 img{
+			width:40px;
+		}
+		#c7 img{
+			width:60px;
+		}
+		#c8 img{
+			width:60px;
+		}
+		#c9 img{
+			width:60px;
+		}
+		#c10 img{
+			width:40px;
+		}
+		#c11 img{
+			width:50px;
+		}
+		#music{
+			 position: absolute;
+				top: 28%;
+				right: 3%;
+				width: 51px;	
+}
+ .music{
+	 		-webkit-background-size: 220px 220px;
+	 	-moz-background-size: 220px 220px;
+	 	background-size: 220px 220px;
+	 	-webkit-border-radius: 110px;
+	 	border-radius: 110px;
+	 -webkit-animation:loadRotate 3s linear infinite;
+	 -webkit-animation-fill-mode:both;
+ }
+@-webkit-keyframes loadRotate{
+  from{
+    -webkit-transform:rotateZ(0deg);
+  }
+  to{
+    -webkit-transform:rotateZ(360deg);
+  }
+}
+@keyframes loadRotate{
+  from{
+    transform:rotateZ(0deg);
+  }
+  to{
+    transform:rotateZ(360deg);
+  }
+}
+  </style>
+  <script src="js/jquery-1.10.1.min.js" type="text/javascript">	</script>
+  <script src='js/bootstrap.min.js'></script>
+</head>
+<body>
+	<div class="main">
+		
+		<img style="width: 100%;" src="img/1-2-04-ok.jpg" alt="">
+	 
+		 <div data-toggle="modal" data-target="#one1" class="icons" id="c1">
+			   <img src="img/icons/1.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one2" class="icons" id="c2">
+		 		<img src="img/icons/2.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one3" class="icons" id="c3">
+		 	<img src="img/icons/3.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one4" class="icons" id="c4">
+		 <img src="img/icons/4.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one5" class="icons" id="c5">
+		 <img src="img/icons/5.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one6" class="icons" id="c6">
+		 <img src="img/icons/6.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one7" class="icons" id="c7">
+		 <img src="img/icons/7.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one8" class="icons" id="c8">
+		 <img src="img/icons/8.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one9" class="icons" id="c9">
+		 <img src="img/icons/9.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one10" class="icons" id="c10">
+		 <img src="img/icons/10.png" alt="">
+		 </div>
+		 <div data-toggle="modal" data-target="#one11" class="icons" id="c11">
+		 <img src="img/icons/11.png" alt="">
+		 </div>
+		  
+	</div>
+	 <audio id="audio"  autoplay="autoplay">
+	 
+	 	<source src="video/11.mp3" type="audio/mpeg" />
+	 
+	 </audio>
+	 <img id="music" src="img/music-player.png" alt="">
+<div id="one1" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">东方蛇园</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one1_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one1_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one1_video">
+					  <video id="my-video1" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="250"
+					  data-setup="{}">
+					  	<source src="video/snake.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one1_jieshao">
+					  东方蛇园是一个以蛇文化为核心、以苏南园林艺术为表现形式、以现代科技为切入点、以传统布局和历史文献为载体，以探幽、旅游、休闲、购物、娱乐为内涵，融知识性、趣味性和商贸于一体的旅游景点，让游人能在观赏游玩中领略自然界蛇类传奇的深邃及悠远。
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one1-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>	
+	<div id="one2" class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+					
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">有机农场</h4>
+				<div class="tabs">
+						 <!-- <img src="img/introduce.png" alt=""> 
+						 <img src="img/video.png" alt=""> -->
+						 <button class="btn active">
+							 <a href="#one2_video" data-toggle="tab">
+										视频
+							 </a>
+						 </button>
+						 <button class="btn ">
+							   <a href="#one2_jieshao" data-toggle="tab">
+							   		介绍
+							   </a>
+						 </button>
+				</div>
+			  </div>
+			  <div class="modal-body">
+					<div class="tab-pane fade in active" id="one2_video">
+						  <video id="my-video2" class="video-js"
+								webkit-playsinline
+								playsinline="true"
+	
+								x-webkit-airplay="allow" 
+								x5-video-player-type="h5"  
+								x5-video-player-fullscreen="true"
+								x5-video-orientation="portraint"
+								style="object-fit:fill"
+							 controls preload="auto" width="740" height="400"
+						  data-setup="{}">
+						  	<source src="video/farm.mp4" type="video/mp4">
+						  </video>
+					</div>
+					
+				  <div class="tab-pane fade wenzi" id="one2_jieshao">
+						 金力奇有机农场是隆力奇、AUREC集团及以色列TAP农业项目公司共同投资，农场所有瓜果的种子都是从国外进口的最优质品种，采用基质袋加营养液培育，产品安全无污染且无农药，培育出来的产品大小均一、菜叶完整、格外清脆、味道极佳。同时，每个基质袋可以培育4棵植株，整个区域种植9936棵作物，瓜果的藤蔓可以依靠生长线的牵引生长至十几米，日产约400公斤瓜果，可周年供应。
+						 </div>
+			  </div>
+			  <div class="modal-footer">
+				<button id="one2-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div>
+<div id="one3" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">真武观</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one3_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one3_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one3_video">
+					  <video id="my-video3" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/cszwg.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one3_jieshao">
+					  2009年，隆力奇捐建了“常熟真武观”，真武观是常熟第一座道教宫观，按道教宫观规制以自然原始的生态风水布局，内设真武殿、玉皇殿、观音殿、元辰殿、药王殿等6个偏殿，2个主殿。2017年，在社会各界的帮助和支持下，捐建了真武观“奇门遁甲”科普园。
+						</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one3-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+<div id="one4" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">江南奇兵</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one4_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one4_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one4_video">
+					  <video id="my-video4" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/jnqb.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one4_jieshao">
+					  江南奇兵是隆力奇于2006年创建的融国防教育、军事拓展、野外生存、高端安保、军事教育、团队培训、学生军训于一体的国防教育训练基地。自创立以来，先后承接了苏州市首批260名转业军官岗前培训班学员和多批次各类人员军事拓展教育培训，为广大复转军人在“第二战场”彰显军人本色，再次实现人生价值提供了舞台。
+						</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one4-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+<div id="one5" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">直销总部</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one5_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one5_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one5_video">
+					  <video id="my-video5" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/zxzb.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one5_jieshao">
+					 隆力奇全球直销总部总投资1亿多元，占地12000平方米，由上海同济大学规划院设计，整个大楼由销售区、办公区、会议和贵宾接待区、大堂四个区域。同时配备客服中心、财务中心、物流中心、小型会议室等，二楼大型会场可同时容纳2000人参会。</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one5-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+					
+<div id="one6" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">隆力奇商业街</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one6_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one6_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one6_video">
+					  <video id="my-video6" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/syj.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one6_jieshao">
+					 从办公大楼径直向前就是隆力奇步行街了。一座座带有江南特色的小楼屹立在街道两旁，道路两边商户云集，餐馆、商超、宾馆应有尽有，虽处乡村地带，但小镇的繁华却不比任何一个人口密集的城镇逊色。
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one6-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+<div id="one7" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">办公大楼</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one7_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one7_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one7_video">
+					  <video id="my-video7" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/bgdalou.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one7_jieshao">
+					  隆力奇办公办公大楼，也就是大名鼎鼎的金牛大楼，有着二十多年的历史，如今依旧巍然而立。办公室内环境大气简约，注重公司文化与环境的交融，完美契合“爱家爱生活”的理念，为员工打造个归宿的家。
+						</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one7-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+<div id="one8" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">隆力奇全球研发中心</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one8_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one8_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one8_video">
+					  <video id="my-video8" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/yanfa.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one8_jieshao">
+					 隆力奇全球研发中心主要承担公司新品研制以及技术嫁接和产业化任务，设护肤、洗化、口腔、日化、保健品、产品评价等项目研究小组，同时承担着国家863科技项目的研究、开发和产业化，国家高新技术产业化项目以及省、市、县科技计划项目等工作。
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one8-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>	
+<div id="one9" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title"> 隆力奇工业4.0智能工厂</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one9_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one9_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one9_video">
+					  <video id="my-video9" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="video/factory.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one9_jieshao">
+				 2013年隆力奇斥资6亿元建造的8万平方米“智能化新工厂”投入使用，包括2.6万平方米的智能化化妆品净化生产车间、全自动原料仓库、材料及成品高架仓、自动配送系统等，将达到年产日化品超100亿元的生产能力。
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one9-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+<div id="one10" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">人工智能生产车间</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one10_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one10_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one10_video">
+					  <video id="my-video10" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="./video/sccj.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one10_jieshao">
+					隆力奇车间内设备33条产线，自动化与智能化控制系统在减少人力成本的同时，也极大地提升了工作效率。其中，意大利ACMA-PYSTER香波全自动灌装线，灌装效率可达200瓶/分钟；机械手臂代替人工生产牙膏，全面实现人工智能化；德国GEA成套反应锅系统年产量达4300万瓶，是世界上最高档的膏霜反应锅。同时，通过自动库管理系统与ERP系统的实时通讯和数据交换，实现了作业过程的自动化控制，并达到了国际通用的6Σ标准。
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one10-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+<div id="one11" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+				
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">隆力奇爱家生活工厂店</h4>
+			<div class="tabs">
+					 <!-- <img src="img/introduce.png" alt=""> 
+					 <img src="img/video.png" alt=""> -->
+					 <button class="btn active">
+						 <a href="#one11_video" data-toggle="tab">
+									视频
+						 </a>
+					 </button>
+					 <button class="btn ">
+						   <a href="#one11_jieshao" data-toggle="tab">
+						   		介绍
+						   </a>
+					 </button>
+			</div>
+		  </div>
+		  <div class="modal-body">
+				<div class="tab-pane fade in active" id="one11_video">
+					  <video id="my-video11" class="video-js"
+							webkit-playsinline
+							playsinline="true"
+
+							x-webkit-airplay="allow" 
+							x5-video-player-type="h5"  
+							x5-video-player-fullscreen="true"
+							x5-video-orientation="portraint"
+							style="object-fit:fill"
+						 controls preload="auto" width="740" height="400"
+					  data-setup="{}">
+					  	<source src="./video/shop.mp4" type="video/mp4">
+					  </video>
+				</div>
+			  <div class="tab-pane fade wenzi" id="one11_jieshao">
+					  爱家生活工厂店主要销售的品类有直销类、保健品类、膏霜类、护肤品类、洗护类、花露水类、口腔类、洗涤类、土特产类等产品。来隆力奇工厂店购物，能够享受到优惠的价格，这里的商品厂家直供，品类齐全，品质优良，超值又实惠。在这里，您可以快乐购物买到高性价比产品，更可以享受到优质服务。
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<button id="one11-close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div>
+ 
+												
+		<script src="js/video.min.js"></script>	
+		<script type="text/javascript">
+			$(function(){
+				 $('.icons').addClass('animated pulse infinite');
+         var audio = $("#audio")[0];
+         audio.play();
+				 $('#music').addClass('music')
+				 function stopRotate(play){
+					 if(play==undefined){
+						 if (audio.paused){
+						 	$('#music').removeClass('music')
+						 }else{
+						 	$('#music').addClass('music')
+						 }
+					 }else{
+						 if (audio.paused){
+						 audio.play();
+						 stopRotate()
+						 }else{
+						 audio.pause();
+						 stopRotate()
+						 }
+					 }
+					
+					
+				 }
+				 $('#music').click(function(){
+					
+					  stopRotate(0)
+				 })
+				 function videoPlay(number){
+					 var myPlayer = videojs('my-video'+number);
+					 var modalWidth=$(window).width();
+
+					 				$('#one'+number).on('shown.bs.modal', function () {
+					 				myPlayer.height(modalWidth*9/16)
+					 				videojs("my-video"+number).ready(function(){
+					 					var myPlayer = this;
+										$('.vjs-big-play-button').hide();
+					 					myPlayer.play();
+					 				});
+									$('#my-video'+number).on('touchstart','#my-video'+number+'_html5_api',function () {   
+										myPlayer.pause();               
+										$('.vjs-big-play-button').show();       
+										 })   
+					 				})
+									  $('#my-video'+number).on('touchstart','.vjs-big-play-button',function () {           
+											myPlayer.play();           
+											 $('.vjs-big-play-button').hide();       
+										})
+                    $('#one'+number).find('.btn').eq(1).click(function(){
+											  myPlayer.pause();               
+											  $('.vjs-big-play-button').show();
+										})
+										$('#one'+number).find('.btn').eq(0).click(function(){
+												myPlayer.play();           
+												$('.vjs-big-play-button').hide();
+										})
+					 				$('#one'+number).on('hidden.bs.modal', function () {
+									 
+					 					myPlayer.pause();
+										audio.play()
+										stopRotate()
+					 				})  
+				 }
+				 $('.icons').click(function(){
+					 audio.pause()
+					 stopRotate()
+				 		var myIndex=$(this).index();
+				 			videoPlay(myIndex)
+				 		
+				 })
+				  
+			})
+		
+	</script>
+	 
+</body>
+
+</html>
